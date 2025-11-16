@@ -1,6 +1,3 @@
-package edu.hfcc.pizza;
-
-import edu.hfcc.pizza.ingredient.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -61,7 +58,6 @@ public class PizzaMakerTest {
         ingredients.add(new Cheese());
         ingredients.add(new Mushroom());
 
-
         Pizza actual = pizzaMaker.makePizza(ingredients, true);
 
         assertEquals(9.0, actual.getTotalCost());
@@ -79,7 +75,7 @@ public class PizzaMakerTest {
 
         Pizza actual = pizzaMaker.makePizza(ingredients, false);
 
-        assertEquals(10, actual.getTotalCost());
+        assertEquals(10.0, actual.getTotalCost());
         assertArrayEquals(ingredients.toArray(), actual.getIngredients().toArray());
         assertFalse(actual.isDeliveryYn());
     }

@@ -1,7 +1,3 @@
-package edu.hfcc.pizza;
-
-import edu.hfcc.pizza.ingredient.Ingredient;
-
 import java.util.ArrayList;
 
 public class Pizza {
@@ -18,12 +14,15 @@ public class Pizza {
     public ArrayList<Ingredient> getIngredients() {
         return ingredients;
     }
+
     public boolean isDeliveryYn() {
         return deliveryYn;
     }
+
     public double getTotalCost() {
         return totalCost;
     }
+
     public void setTotalCost(double totalCost) {
         this.totalCost = totalCost;
     }

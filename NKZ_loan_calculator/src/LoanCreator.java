@@ -1,5 +1,3 @@
-package edu.hfcc;
-
 import java.util.Scanner;
 
 public class LoanCreator {
@@ -28,29 +26,29 @@ public class LoanCreator {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter first name: ");
+            String firstName = input.nextLine();
 
-        System.out.print("Enter first name: ");
-        String firstName = input.nextLine();
+            System.out.print("Enter last name: ");
+            String lastName = input.nextLine();
 
-        System.out.print("Enter last name: ");
-        String lastName = input.nextLine();
+            System.out.print("Enter loan amount: ");
+            int loanAmount = input.nextInt();
 
-        System.out.print("Enter loan amount: ");
-        int loanAmount = input.nextInt();
+            System.out.print("Enter term in years (or 0 for default): ");
+            int termInput = input.nextInt();
+            Integer term = (termInput == 0) ? null : termInput;
 
-        System.out.print("Enter term in years (or 0 for default): ");
-        int termInput = input.nextInt();
-        Integer term = (termInput == 0) ? null : termInput;
+            System.out.print("Enter interest rate (or 0 for default): ");
+            double interestInput = input.nextDouble();
+            Double interestRate = (interestInput == 0) ? null : interestInput;
 
-        System.out.print("Enter interest rate (or 0 for default): ");
-        double interestInput = input.nextDouble();
-        Double interestRate = (interestInput == 0) ? null : interestInput;
+            LoanCreator creator = new LoanCreator();
+            String result = creator.execute(firstName, lastName, loanAmount, term, interestRate);
 
-        LoanCreator creator = new LoanCreator();
-        String result = creator.execute(firstName, lastName, loanAmount, term, interestRate);
-
-        System.out.println();
-        System.out.println(result);
+            System.out.println();
+            System.out.println(result);
+        }
     }
 }
