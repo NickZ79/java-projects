@@ -7,18 +7,15 @@ Most of these started as school assignments, but I treat them like real-world pr
 
 ### 1. Pizza Builder (OOP & Testing)
 - **Summary:** A console-based app that builds pizzas from a list of ingredients, calculates prices, and runs test cases to verify different pizza combinations.
-- **Concepts:** Classes and objects, arrays/lists, methods, simple “unit test” style checks.
-- **Folder:** `pizza-builder/`
+- **Concepts:** Input validation, methods, arithmetic operations, encapsulation, string formatting, modular program structur
+- **Folder:** `pizza_maker/`
 
-### 2. [Project Name Here]
-- **Summary:** One–two sentence description.
+### 2. [loan calculator]
+- **Summary:** A Java console program that calculates monthly loan payments based on user-entered amount, interest rate, and term. It outputs formatted amortization details and demonstrates basic math operations and user input handling.
 - **Concepts:** e.g., file I/O, inheritance, interfaces, collections, etc.
-- **Folder:** `project-folder-name/`
+- **Folder:** `loan_calculator/`
 
-### 3. [Project Name Here]
-- **Summary:** One–two sentence description.
-- **Concepts:** ...
-- **Folder:** `project-folder-name/`
+
 
 > As I continue through my degree, I’ll add more Java projects here to track my progress and show how my code evolves over time.
 
